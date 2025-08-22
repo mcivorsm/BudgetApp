@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { supabase } from '../SupabaseClient';
+import '../Form.css';
+
 function LoginForm(){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,7 +20,7 @@ function LoginForm(){
 
     return (
         <>
-      
+            <div class="formClass">
             <label>Email</label>
                 <input value={email} onChange={e => setEmail(e.target.value)} />
             <label>Password</label>
@@ -26,7 +28,7 @@ function LoginForm(){
              
 
              <button onClick = {handleLogin}>Login</button>
-       
+       </div>
         </>
     )
   
